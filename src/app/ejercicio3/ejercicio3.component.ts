@@ -16,21 +16,6 @@ export class Ejercicio3Component implements OnInit {
  TablaOk: boolean = false;
  abecedario = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',];
 
- soloLetras(e): void {
-    var key = e.keyCode || e.which;
-    var tecla = String.fromCharCode(key).toLowerCase();
-    var letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-    var especiales = [8, 37, 39, 46];
-
-    var tecla_especial = false
-    for (var i in especiales) {
-        if (key == especiales[i]) {
-            tecla_especial = true;
-            break;
-        }
-    }
-
- }
 
 verificarTabla() {
     let TablaCapmlea = true;
@@ -160,6 +145,7 @@ clickDesencriptar() {
 
 
 }
+
 buscarIndxLetra(Letra: string) {
     //console.log('dentro', Letra);
     for (let index = 0; index < this.abecedario.length; index++) {
